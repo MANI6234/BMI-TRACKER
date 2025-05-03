@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WHtR Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Waist-to-Height Ratio</h2>
+
+    <input type="number" id="waist" placeholder="Waist (cm)" required>
+    <input type="number" id="height" placeholder="Height (cm)" required>
+    <button onclick="calculateWHtR()">Calculate WHtR</button>
+
+    <div id="whtrResult"></div>
+
+    <hr>
+    <h3>Your WHtR History</h3>
+    <ul id="whtrHistory"></ul>
+
+    <button onclick="goBack()">Back to Menu</button>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    function goBack() {
+      window.location.href = "menu.html";
+    }
+
+    window.onload = function () {
+      loadWHtRHistory();
+    };
+  </script>
+</body>
+</html>
